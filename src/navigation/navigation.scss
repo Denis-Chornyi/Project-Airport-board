@@ -1,0 +1,23 @@
+.header {
+  &__list {
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 35px;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffffb5;
+    }
+  }
+
+  &__list-item:last-child .header__link {
+    font-size: 22px; 
+    font-weight: 700;
+  }
+}

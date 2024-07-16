@@ -26,6 +26,19 @@ module.exports = (env, argv) => {
             'css-loader',
             'sass-loader'
           ]
+        },
+        {
+          test: /.(jpg|png|gif|svg|webp)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192,
+                name: '[name].[ext]',
+                outputPath: 'images'
+              }
+            }
+          ]
         }
       ]
     },
@@ -43,7 +56,7 @@ module.exports = (env, argv) => {
       historyApiFallback: true,
       open: true,
       hot: true,
-      port: 1080
+      port: 7070
     }
   };
 

@@ -1,0 +1,99 @@
+.footer {
+  background-color: #595959;
+  color: #fff;
+  min-height: 393px;
+  padding: 30px 0 40px;
+  width: 100%;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    min-height: 230px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__link {
+    font-weight: 700;
+  }
+
+  &__link > a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__contact-and-follow {
+    width: 265px;
+  }
+
+  &__contact-and-follow h6 {
+    font-size: 16px;
+    margin: 15px 0 5px;
+  }
+
+  &__contact-and-follow span {
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  &__contact-and-follow a {
+    align-items: center;
+    display: flex;
+    float: left;
+    height: 30px;
+    justify-content: center;
+    margin-right: 23px;
+    width: 30px;
+  }
+
+  &__contact-and-follow a > img {
+    width: 30px;
+  }
+
+  &__extra-info-block {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.502);
+    display: flex;
+    height: 37px;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  &__middle-logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  &__small-logo-wrapper a {
+    color: #fff9;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  &__small-logo-wrapper span {
+    color: #fff9;
+    font-size: 12px;
+  }
+
+  &__small-logo-wrapper img {
+    float: right;
+    margin-left: 5px;
+    position: relative;
+    top: -15px;
+    width: 29px;
+  }
+
+  &__small-logo-wrapper_last img {
+    right: 5px;
+    top: 4px;
+    width: 96px;
+  }
+}

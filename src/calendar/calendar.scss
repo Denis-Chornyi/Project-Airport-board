@@ -1,0 +1,68 @@
+.filter {
+  &__date-wrapper {
+    display: flex;
+    height: 140px;
+    padding: 85px 20px 0;
+    width: 1200px;
+  }
+
+  &__date-input-label {
+    margin-right: 30px;
+  }
+
+  &__date-input-label p {
+    color: #1eb7ee;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+  &__date-input {
+    background-color: #1eb7ee;
+    background-position: 44% 47%;
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    height: 40px;
+    outline: none;
+    width: 40px;
+  }
+
+  &__date-buttons {
+    display: flex;
+    height: 100%;
+    width: 300px;
+  }
+
+  &__date-button {
+    border-bottom: 3px solid #d0d0d0;
+    color: #b8b9b9;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    width: 100px;
+  }
+
+  &__date-button p:first-child {
+    font-size: 12px;
+    margin: 0 0 12px 0;
+  }
+
+  &__date-button p:last-child {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__date-button_current {
+    border-bottom: 3px solid #1eb7ee;
+    color: #1eb7ee;
+  }
+}
