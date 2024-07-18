@@ -7,8 +7,8 @@ const Filter = () => {
   return (
     <div className="filter">
       <div className="filter__buttons-wrapper">
-        <ButtonFilter name="DEPARTURES" />
-        <ButtonFilter name="ARRIVALS" />
+        <ButtonFilter name="DEPARTURE" />
+        <ButtonFilter name="ARRIVAL" />
       </div>
       <Calendar />
     </div>

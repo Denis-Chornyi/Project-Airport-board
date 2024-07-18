@@ -1,6 +1,6 @@
 export const SET_ACTIVE_BUTTON_FILTER = 'SET_ACTIVE_BUTTON_FILTER';
 
-export const setActiveButtonFilter = buttonName => ({
+export const setActiveButtonFilter = (filterType) => ({
   type: SET_ACTIVE_BUTTON_FILTER,
-  payload: buttonName
+  payload: filterType,
 });

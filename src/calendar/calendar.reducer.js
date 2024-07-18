@@ -1,7 +1,8 @@
-import { SET_ACTIVE_BUTTON } from './calendar.actions';
+import { SET_ACTIVE_BUTTON, SET_FILTER_DATE } from './calendar.actions';
 
 const initialState = {
-  activeButton: 'TODAY'
+  activeButton: 'TODAY',
+  selectedDate: ''
 };
 
 const calendarReducer = (state = initialState, action) => {
@@ -11,6 +12,12 @@ const calendarReducer = (state = initialState, action) => {
         ...state,
         activeButton: action.payload
       };
+    case SET_FILTER_DATE:
+      return {
+        ...state,
+        selectedDate: action.payload
+      };
+
     default:
       return state;
   }

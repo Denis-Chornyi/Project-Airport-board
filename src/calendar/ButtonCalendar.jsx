@@ -1,14 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './calendar.scss';
-import { setActiveButton } from './calendar.actions';
+import { setActiveButton, setFilterDate } from './calendar.actions';
 
-const Button = ({ name }) => {
+const ButtonCalendar = ({ name, date }) => {
   const activeButton = useSelector(state => state.calendar.activeButton);
   const dispatch = useDispatch();
 
   const handleClick = () => {
     dispatch(setActiveButton(name));
+    dispatch(setFilterDate(date));
   };
 
   return (
@@ -18,10 +19,10 @@ const Button = ({ name }) => {
       }`}
       onClick={handleClick}
     >
-      <p>15/07</p>
+      <p>{date}</p>
       <p>{name}</p>
     </div>
   );
 };
 
-export default Button;
+export default ButtonCalendar;

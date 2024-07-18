@@ -16,7 +16,7 @@ const ButtonFilter = ({ name }) => {
       className={`filter__button ${activeButton === name ? 'filter__button_current' : ''}`}
       onClick={handleClick}
     >
-      {name}
+      {name === "DEPARTURE" ? "DEPARTURES" : "ARRIVALS"}
     </button>
   );
 };

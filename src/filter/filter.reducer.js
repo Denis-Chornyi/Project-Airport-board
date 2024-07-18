@@ -1,7 +1,7 @@
 import { SET_ACTIVE_BUTTON_FILTER } from './filter.actions';
 
 const initialState = {
-  activeButtonFilter: 'DEPARTURES'
+  activeButtonFilter: 'DEPARTURE'
 };
 
 const filterReducer = (state = initialState, action) => {
