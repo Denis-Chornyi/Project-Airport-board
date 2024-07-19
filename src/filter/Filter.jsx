@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendar from '../calendar/calendar';
+import Calendar from '../calendar/Calendar';
 import ButtonFilter from './ButtonFilter';
 import './filter.scss';
 
