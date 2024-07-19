@@ -1,15 +1,19 @@
 import React from 'react';
 import './main.scss';
 import Search from '../search/Search';
-import Board from '../board/Board';
+import mainPage from '../image/main-page.webp';
+import Flights from '../flights/Flights';
 
 const Main = () => {
+  const mainStyles = { backgroundImage: `url(${mainPage})` };
   return (
     <main>
-      <section className="board">
+      <section className="board" style={mainStyles}>
         <div className="container">
-          <Search />
-          <Board />
+          <div className="search-form">
+            <Search />
+            <Flights />
+          </div>
         </div>
       </section>
     </main>

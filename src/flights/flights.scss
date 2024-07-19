@@ -1,0 +1,74 @@
+.flights {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+  margin-bottom: 88px;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    text-decoration: none;
+    padding-top: 16px;
+    background-color: #fff;
+    color: #1eb7ee;
+    font-size: 20px;
+    font-weight: 500;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #1eb7ee;
+      color: #fff;
+    }
+
+    &::before {
+      background: url(https://www.pngkey.com/png/full/138-1382606_icon-airplane-icon-blue-png.png)
+        no-repeat 50%;
+      background-size: contain;
+      margin-right: 20px;
+      content: '';
+      display: block;
+      filter: brightness(110%);
+      height: 30px;
+      left: 10px;
+      position: absolute;
+      top: 16px;
+      width: 30px;
+    }
+
+    &:hover::before {
+      filter: brightness(500%);
+    }
+
+    &:last-child::before {
+      left: auto;
+      right: -10px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__button:nth-child(1) {
+    text-align: left;
+    border-radius: 10px 75px 10px 10px;
+    padding-left: 20px;
+
+    &:hover {
+      border-radius: 10px 35px 10px 10px;
+    }
+  }
+
+  &__button:nth-child(2) {
+    right: 0;
+    text-align: right;
+    padding-right: 20px;
+    border-radius: 75px 10px 10px 10px;
+
+    &:hover {
+      border-radius: 35px 10px 10px 10px;
+    }
+  }
+}

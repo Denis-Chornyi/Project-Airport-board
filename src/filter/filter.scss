@@ -7,6 +7,9 @@
   }
 
   &__button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     background-color: #73d2f0;
     border: none;
     border-radius: 0 60px 0 0;
@@ -19,6 +22,7 @@
     padding: 0 135px 0 0;
     position: absolute;
     text-align: end;
+    text-decoration: none;
     top: 0;
     transition: 0.3s ease-in-out;
     width: 55%;
@@ -29,6 +33,7 @@
     }
 
     &:last-child {
+      justify-content: start;
       border-radius: 60px 0 0 0;
       padding: 0 0 0 180px;
       right: 0;

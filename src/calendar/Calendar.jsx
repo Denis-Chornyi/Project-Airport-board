@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './calendar.scss';
 import calendar from '../image/calendar.svg';
 import ButtonCalendar from './ButtonCalendar';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterDate } from './calendar.actions';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Calendar = () => {
   const dispatch = useDispatch();
   const selectedDate = useSelector(state => state.calendar.selectedDate);
-  useEffect(() => {
-    const today = moment().format('YYYY-MM-DD');
-    dispatch(setFilterDate(today));
-  }, [dispatch]);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const inputStyles = { backgroundImage: `url(${calendar})` };
 
   const handleDateChange = event => {
-    const newValue = event.target.value;
-    dispatch(setFilterDate(newValue));
+    const newDate = event.target.value;
+    dispatch(setFilterDate(newDate));
+    const params = new URLSearchParams(location.search);
+    params.set('date', newDate);
+    const search = params.get('search') || '';
+    navigate({ search: params.toString() });
   };
 
   const formattedDate = moment(selectedDate).format('MM/DD');
@@ -42,17 +46,17 @@ const Calendar = () => {
         <ButtonCalendar
           name="YESTERDAY"
           date={yesterday}
-          onDateChange={() => dispatch(setFilterDate(yesterday))}
+          onDateChange={() => handleDateChange({ target: { value: yesterday } })}
         />
         <ButtonCalendar
           name="TODAY"
           date={today}
-          onDateChange={() => dispatch(setFilterDate(today))}
+          onDateChange={() => handleDateChange({ target: { value: today } })}
         />
         <ButtonCalendar
           name="TOMORROW"
           date={tomorrow}
-          onDateChange={() => dispatch(setFilterDate(tomorrow))}
+          onDateChange={() => handleDateChange({ target: { value: tomorrow } })}
         />
       </div>
     </div>

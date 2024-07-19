@@ -5,6 +5,10 @@
   padding: 30px 0 40px;
   width: 100%;
 
+  &__container {
+    display: block;
+  }
+
   &__navigation {
     display: flex;
     justify-content: space-between;
@@ -70,6 +74,7 @@
     display: flex;
     justify-content: space-between;
     width: 40%;
+    text-align: left;
   }
 
   &__small-logo-wrapper a {
@@ -89,6 +94,10 @@
     position: relative;
     top: -15px;
     width: 29px;
+  }
+
+  &__small-logo-wrapper_last {
+    text-align: left;
   }
 
   &__small-logo-wrapper_last img {

@@ -11,7 +11,7 @@ import ufutureLogo from '../image/ufuture.png';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container footer__container">
         <nav className="footer__navigation">
           <ul className="footer__links">
             <li className="footer__link">For passengers</li>

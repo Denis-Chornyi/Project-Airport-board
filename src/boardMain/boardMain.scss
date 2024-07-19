@@ -1,0 +1,21 @@
+.board-main {
+  background-color: #e6e6e6;
+  flex: 1 1 auto;
+  padding: 132px 0 50px;
+
+  &__container {
+    height: 100%;
+    margin: 0 auto;
+    width: 1120px;
+  }
+}
+
+.board {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 440px;
+}
+
+.search-form {
+  width: 730px;
+}
