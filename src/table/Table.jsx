@@ -10,7 +10,7 @@ const Table = ({ flights }) => {
       </div>
     );
   }
-  console.log(flights);
+
   return (
     <div className="table">
       <div className="table__header">
