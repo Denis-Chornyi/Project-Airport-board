@@ -1,5 +1,6 @@
 import React from 'react';
 import './table.scss';
+import PropTypes from 'prop-types';
 
 const Table = ({ flights }) => {
   if (flights.length === 0) {
@@ -9,10 +10,10 @@ const Table = ({ flights }) => {
       </div>
     );
   }
-
+  console.log(flights);
   return (
     <div className="table">
-      <div className='table__header'>
+      <div className="table__header">
         <p>Terminal</p>
         <p>Departure city</p>
         <p>Arrival city</p>
@@ -35,7 +36,6 @@ const Table = ({ flights }) => {
           <div>{flight.airlineName}</div>
           <div>
             <img src={flight.airlineLogo} alt={flight.airlineName} width="30" />
-            
           </div>
           <div>{flight.codeShare}</div>
           <div>{flight.status}</div>
@@ -46,3 +46,7 @@ const Table = ({ flights }) => {
 };
 
 export default Table;
+
+Table.propTypes = {
+  flights: PropTypes.array.isRequired
+};

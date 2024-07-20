@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setActiveButton, setFilterDate } from './calendar.actions';
+import PropTypes from 'prop-types';
 
 const ButtonCalendar = ({ name, date }) => {
   const dispatch = useDispatch();
@@ -30,3 +31,7 @@ const ButtonCalendar = ({ name, date }) => {
 };
 
 export default ButtonCalendar;
+
+ButtonCalendar.propTypes = {
+  name: PropTypes.string.isRequired
+};

@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import './filter.scss';
 import { setActiveButtonFilter } from './filter.actions';
+import PropTypes from 'prop-types';
+
 
 const ButtonFilter = ({ name }) => {
   const dispatch = useDispatch();
@@ -30,3 +32,7 @@ const ButtonFilter = ({ name }) => {
 };
 
 export default ButtonFilter;
+
+ButtonFilter.propTypes = {
+  name: PropTypes.string.isRequired
+};
