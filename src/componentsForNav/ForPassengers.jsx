@@ -1,0 +1,65 @@
+import React from 'react';
+import './componentsForNav.scss';
+import imgPlane from '../image/image-nav/plane.jpg';
+
+const ForPassengers = ({ isVisible }) => {
+  const styleContainer = isVisible
+    ? {
+        opacity: 1,
+        transform: 'translateY(0)',
+        visibility: 'visible',
+        transition: 'visibility .3s, transform .3s, opacity .3s'
+      }
+    : {
+        opacity: 0,
+        transform: 'translateY(-100%)',
+        visibility: 'hidden',
+        transition: 'visibility .3s, transform .3s, opacity .3s'
+      };
+
+  const styleModal = isVisible ? { pointerEvents: 'all' } : { pointerEvents: 'none' };
+
+  return (
+    <div className="header-modal" style={styleModal}>
+      <div className="header-modal__container" style={styleContainer}>
+        <div className="header-modal__block">
+          <nav>
+            <img src={imgPlane} alt="plane" className="header-modal__block-img" />
+            <h4 className="header-modal__block-title">Airline tickets</h4>
+            <p className="header-modal__block-text">Purchase tickets online</p>
+            <a className="header-modal__block-link">Search</a>
+          </nav>
+        </div>
+        <div className="header-modal__links">
+          <div>
+            <p>Information</p>
+            <a>COVID-19</a>
+            <a>Before flight</a>
+            <a>Aviation security</a>
+            <a>Customs control</a>
+            <a>Border control</a>
+            <a>For passengers with disabilities</a>
+            <a>Traveling with animals</a>
+            <a>Airport map</a>
+            <a>Feedback form</a>
+            <a>Contacts</a>
+          </div>
+          <div>
+            <p>General</p>
+            <a>On-line schedule</a>
+            <a>Airport Directions</a>
+            <a>Parking</a>
+            <a>Baggage</a>
+            <a>Relaxation room</a>
+            <a>Airlines</a>
+            <a>Shop & dine</a>
+            <a>Mastercard Fast Line</a>
+            <a>Feedback form</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ForPassengers;

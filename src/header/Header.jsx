@@ -3,6 +3,7 @@ import './header.scss';
 import logo from '../image/logo.png';
 import Navigation from '../navigation/Navigation';
 import { Link } from 'react-router-dom';
+import ForPassengers from '../componentsForNav/ForPassengers';
 
 const Header = () => {
   return (

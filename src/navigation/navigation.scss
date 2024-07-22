@@ -3,21 +3,36 @@
     display: flex;
     font-size: 20px;
     list-style: none;
+    margin: 0;
   }
 
   &__link {
-    color: #fff;
     font-size: 20px;
     padding: 0 35px;
     text-decoration: none;
+    cursor: pointer;
 
-    &:hover {
-      color: #ffffffb5;
+    &:last-child {
+      color: #fff;
+    }
+  }
+
+  &__list-item {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 92px;
+    padding: 0;
+
+    &_active {
+      border-radius: 0 30px 0 0;
+      color: #008ab7;
+      background: linear-gradient(90deg, #1eb7ee 25%, #ffffff 100%);
     }
   }
 
   &__list-item:last-child .header__link {
-    font-size: 22px; 
+    font-size: 22px;
     font-weight: 700;
   }
 }
