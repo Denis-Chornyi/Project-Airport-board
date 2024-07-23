@@ -1,6 +1,8 @@
 import React from 'react';
 import './componentsForNav.scss';
 import imgPlane from '../image/image-nav/plane.jpg';
+import PropTypes from 'prop-types';
+
 
 const ForPassengers = ({ isVisible }) => {
   const styleContainer = isVisible
@@ -63,3 +65,7 @@ const ForPassengers = ({ isVisible }) => {
 };
 
 export default ForPassengers;
+
+ForPassengers.propTypes = {
+  isVisible: PropTypes.bool.isRequired
+};
