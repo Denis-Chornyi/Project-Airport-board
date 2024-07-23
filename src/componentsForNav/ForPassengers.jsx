@@ -2,24 +2,10 @@ import React from 'react';
 import './componentsForNav.scss';
 import imgPlane from '../image/image-nav/plane.jpg';
 import PropTypes from 'prop-types';
-
+import { getModalStyles } from './utilsModalStyles';
 
 const ForPassengers = ({ isVisible }) => {
-  const styleContainer = isVisible
-    ? {
-        opacity: 1,
-        transform: 'translateY(0)',
-        visibility: 'visible',
-        transition: 'visibility .3s, transform .3s, opacity .3s'
-      }
-    : {
-        opacity: 0,
-        transform: 'translateY(-100%)',
-        visibility: 'hidden',
-        transition: 'visibility .3s, transform .3s, opacity .3s'
-      };
-
-  const styleModal = isVisible ? { pointerEvents: 'all' } : { pointerEvents: 'none' };
+  const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);
 
   return (
     <div className="header-modal" style={styleModal}>
