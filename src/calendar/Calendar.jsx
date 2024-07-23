@@ -20,7 +20,6 @@ const Calendar = () => {
     dispatch(setFilterDate(newDate));
     const params = new URLSearchParams(location.search);
     params.set('date', newDate);
-    const search = params.get('search') || '';
     navigate({ search: params.toString() });
   };
 
