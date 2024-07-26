@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './flights.scss';
 import moment from 'moment';
+import './flights.scss';
 
 const Flights = () => {
   const location = useLocation();
@@ -11,9 +11,7 @@ const Flights = () => {
   return (
     <div className="flights">
       <Link
-        className={`flights__button ${
-          currentType === 'DEPARTURE' ? 'flights__button_active' : ''
-        }`}
+        className={`flights__button ${currentType === 'DEPARTURE' ? 'flights__button_active' : ''}`}
         to={`board-main?type=DEPARTURE&date=${today}`}
       >
         DEPARTURES ALL FLIGHTS

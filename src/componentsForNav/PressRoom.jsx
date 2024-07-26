@@ -1,7 +1,8 @@
 import React from 'react';
-import './componentsForNav.scss';
 import imgPlane from '../image/image-nav/plane.jpg';
 import { getModalStyles } from './utilsModalStyles';
+import './componentsForNav.scss';
+
 
 const PressRoom = ({ isVisible }) => {
   const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);

@@ -1,6 +1,6 @@
 import React from 'react';
-import './table.scss';
 import PropTypes from 'prop-types';
+import './table.scss';
 
 const Table = ({ flights }) => {
   if (flights.length === 0) {

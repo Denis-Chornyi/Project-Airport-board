@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './navigation.scss';
 import ForPassengers from '../componentsForNav/ForPassengers';
 import Services from '../componentsForNav/Services';
 import Vip from '../componentsForNav/Vip';
 import Corporate from '../componentsForNav/Corporate';
 import PressRoom from '../componentsForNav/PressRoom';
+import './navigation.scss';
 
 const Navigation = () => {
   const [visibleItem, setVisibleItem] = useState('');

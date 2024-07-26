@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import Filter from '../filter/Filter';
 import Table from '../table/Table';
 import { fetchFlightsSuccess } from './board.actions';
-import './board.scss';
 import { fetchFlights } from '../gateway/eventsGateways';
 import moment from 'moment';
 import { useLocation } from 'react-router-dom';
 import { setActiveButtonFilter } from '../filter/filter.actions';
 import { setFilterNumber } from '../search/search.actions';
 import { setFilterDate } from '../calendar/calendar.actions';
+import './board.scss';
 
 const Board = () => {
   const dispatch = useDispatch();

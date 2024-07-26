@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './search.scss';
 import { useDispatch } from 'react-redux';
 import { setFilterNumber } from './search.actions';
 import { useNavigate, useLocation } from 'react-router-dom';
 import moment from 'moment';
+import './search.scss';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');

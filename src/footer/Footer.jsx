@@ -1,5 +1,4 @@
 import React from 'react';
-import './footer.scss';
 import facebookIcon from '../image/image-footer/facebook.svg';
 import instagramIcon from '../image/image-footer/instagram.svg';
 import xIcon from '../image/image-footer/twitter.svg';
@@ -7,6 +6,7 @@ import youtubeIcon from '../image/image-footer/youtube.svg';
 import linkedinIcon from '../image/image-footer/linkedin.svg';
 import spmlLogo from '../image/image-footer/smpl-logo.webp';
 import ufutureLogo from '../image/image-footer/ufuture.png';
+import './footer.scss';
 
 const Footer = () => {
   return (
@@ -100,7 +100,11 @@ const Footer = () => {
             </div>
             <div className="footer__small-logo-wrapper">
               <a href="https://ufuture.com/uk/">
-                Part of<b> Ufuture<br />
+                Part of
+                <b>
+                  {' '}
+                  Ufuture
+                  <br />
                   Investment Group
                 </b>
                 <img src={ufutureLogo} alt="uFuture logo" />

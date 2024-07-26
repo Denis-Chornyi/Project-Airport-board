@@ -1,9 +1,8 @@
 import React from 'react';
-import './header.scss';
 import logo from '../image/logo.png';
 import Navigation from '../navigation/Navigation';
 import { Link } from 'react-router-dom';
-import ForPassengers from '../componentsForNav/ForPassengers';
+import './header.scss';
 
 const Header = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import './main.scss';
 import Search from '../search/Search';
 import mainPage from '../image/main-page.webp';
 import Flights from '../flights/Flights';
+import './main.scss';
 
 const Main = () => {
   const mainStyles = { backgroundImage: `url(${mainPage})` };

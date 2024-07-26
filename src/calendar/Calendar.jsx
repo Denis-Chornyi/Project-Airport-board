@@ -1,11 +1,11 @@
 import React from 'react';
-import './calendar.scss';
 import calendar from '../image/calendar.svg';
 import ButtonCalendar from './ButtonCalendar';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterDate } from './calendar.actions';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './calendar.scss';
 
 const Calendar = () => {
   const dispatch = useDispatch();
