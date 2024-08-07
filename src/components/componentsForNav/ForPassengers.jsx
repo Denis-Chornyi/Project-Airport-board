@@ -1,9 +1,8 @@
 import React from 'react';
-import imgPlane from '../image/image-nav/plane.jpg';
+import imgPlane from '../../images/image-nav/plane.jpg';
 import PropTypes from 'prop-types';
-import { getModalStyles } from './utilsModalStyles';
+import { getModalStyles } from '../../common/utilsModalStyles';
 import './componentsForNav.scss';
-
 
 const ForPassengers = ({ isVisible }) => {
   const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);

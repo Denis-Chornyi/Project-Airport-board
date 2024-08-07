@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './header/Header';
-import Main from './main/Main';
-import Footer from './footer/Footer';
+import Header from './components/header/Header';
+import Main from './components/main/Main';
+import Footer from './components/footer/Footer';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import BoardMain from './boardMain/BoardMain';
+import BoardMain from './components/boardMain/BoardMain';
 
 const App = () => {
   return (

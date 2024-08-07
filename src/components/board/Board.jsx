@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Filter from '../filter/Filter';
 import Table from '../table/Table';
 import { fetchFlightsSuccess } from './board.actions';
-import { fetchFlights } from '../gateway/eventsGateways';
+import { fetchFlights } from '../../common/gateway/eventsGateways';
 import moment from 'moment';
 import { useLocation } from 'react-router-dom';
 import { setActiveButtonFilter } from '../filter/filter.actions';

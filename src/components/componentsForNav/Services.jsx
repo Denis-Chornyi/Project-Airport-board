@@ -1,8 +1,7 @@
 import React from 'react';
-import imgPlane from '../image/image-nav/Hotels.jpg';
-import { getModalStyles } from './utilsModalStyles';
+import imgPlane from '../../images/image-nav/Hotels.jpg';
+import { getModalStyles } from '../../common/utilsModalStyles';
 import './componentsForNav.scss';
-
 
 const Services = ({ isVisible }) => {
   const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);

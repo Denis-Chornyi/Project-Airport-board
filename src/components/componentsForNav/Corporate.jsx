@@ -1,10 +1,9 @@
 import React from 'react';
-import imgPlane from '../image/image-nav/plane.jpg';
-import { getModalStyles } from './utilsModalStyles';
+import imgPlane from '../../images/image-nav/plane.jpg';
+import { getModalStyles } from '../../common/utilsModalStyles';
 import './componentsForNav.scss';
 
-
-const PressRoom = ({ isVisible }) => {
+const Corporate = ({ isVisible }) => {
   const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);
 
   return (
@@ -20,13 +19,14 @@ const PressRoom = ({ isVisible }) => {
         </div>
         <div className="header-modal__links">
           <div>
-            <p>Press Room</p>
-            <a>Press Room main page</a>
-            <a>Newsroom</a>
-            <a>Social & Art Projects</a>
-            <a>Traffic statistics</a>
-            <a>Financial reports</a>
-            <a>Media contact</a>
+            <p>Corporate</p>
+            <a>Corporate page</a>
+            <a>Ground handling</a>
+            <a>Airport characteristics</a>
+            <a>Education</a>
+            <a>Cargo terminal</a>
+            <a>Careers</a>
+            <a>Corporate contacts</a>
           </div>
         </div>
       </div>
@@ -34,4 +34,4 @@ const PressRoom = ({ isVisible }) => {
   );
 };
 
-export default PressRoom;
+export default Corporate;

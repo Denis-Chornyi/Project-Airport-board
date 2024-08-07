@@ -1,5 +1,5 @@
 import React from 'react';
-import calendar from '../image/calendar.svg';
+import calendar from '../../images/calendar.svg';
 import ButtonCalendar from './ButtonCalendar';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
