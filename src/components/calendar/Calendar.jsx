@@ -1,7 +1,7 @@
 import React from 'react';
-import calendar from '../../images/calendar.svg';
-import ButtonCalendar from './ButtonCalendar';
 import moment from 'moment';
+import calendar from '../../../public/images/calendar.png';
+import ButtonCalendar from './components/ButtonCalendar';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterDate } from './calendar.actions';
 import { useLocation, useNavigate } from 'react-router-dom';

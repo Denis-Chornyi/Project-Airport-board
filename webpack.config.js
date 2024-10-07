@@ -35,7 +35,7 @@ module.exports = (_, argv) => {
               options: {
                 limit: 8192,
                 name: '[name].[ext]',
-                outputPath: 'images'
+                outputPath: 'public/images'
               }
             }
           ]

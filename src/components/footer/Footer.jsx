@@ -1,11 +1,11 @@
 import React from 'react';
-import facebookIcon from '../../images/image-footer/facebook.svg';
-import instagramIcon from '../../images/image-footer/instagram.svg';
-import xIcon from '../../images/image-footer/twitter.svg';
-import youtubeIcon from '../../images/image-footer/youtube.svg';
-import linkedinIcon from '../../images/image-footer/linkedin.svg';
-import spmlLogo from '../../images/image-footer/smpl-logo.webp';
-import ufutureLogo from '../../images/image-footer/ufuture.png';
+import facebookIcon from '../../../public/images/image-footer/facebook.svg';
+import instagramIcon from '../../../public/images/image-footer/instagram.svg';
+import xIcon from '../../../public/images/image-footer/twitter.svg';
+import youtubeIcon from '../../../public/images/image-footer/youtube.svg';
+import linkedinIcon from '../../../public/images/image-footer/linkedin.svg';
+import spmlLogo from '../../../public/images/image-footer/smpl-logo.webp';
+import ufutureLogo from '../../../public/images/image-footer/ufuture.png';
 import './footer.scss';
 
 const Footer = () => {

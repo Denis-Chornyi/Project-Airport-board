@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../search/Search';
-import mainPage from '../../images/main-page.webp';
+import mainPage from '../../../public/images/main-page.webp';
 import Flights from '../flights/Flights';
 import './main.scss';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Calendar from '../calendar/Calendar';
-import ButtonFilter from './ButtonFilter';
+import ButtonFilter from './components/ButtonFilter';
 import './filter.scss';
 
 const Filter = () => {

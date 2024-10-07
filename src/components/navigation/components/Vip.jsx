@@ -1,6 +1,6 @@
 import React from 'react';
-import imgPlane from '../../images/image-nav/vip.jpg';
-import { getModalStyles } from '../../common/utilsModalStyles';
+import imgPlane from '../../../../public/images/image-nav/vip.jpg';
+import { getModalStyles } from '../../../common/utilsModalStyles';
 import './componentsForNav.scss';
 
 const Vip = ({ isVisible }) => {

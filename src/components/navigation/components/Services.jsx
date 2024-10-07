@@ -1,6 +1,6 @@
 import React from 'react';
-import imgPlane from '../../images/image-nav/Hotels.jpg';
-import { getModalStyles } from '../../common/utilsModalStyles';
+import imgPlane from '../../../../public/images/image-nav/Hotels.jpg';
+import { getModalStyles } from '../../../common/utilsModalStyles';
 import './componentsForNav.scss';
 
 const Services = ({ isVisible }) => {

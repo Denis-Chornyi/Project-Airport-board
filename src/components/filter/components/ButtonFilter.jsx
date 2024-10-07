@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import { setActiveButtonFilter } from './filter.actions';
+import { setActiveButtonFilter } from '../filter.actions';
 import PropTypes from 'prop-types';
-import './filter.scss';
+import '../filter.scss';
 
 
 

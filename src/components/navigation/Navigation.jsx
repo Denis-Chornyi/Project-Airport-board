@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import ForPassengers from '../componentsForNav/ForPassengers';
-import Services from '../componentsForNav/Services';
-import Vip from '../componentsForNav/Vip';
-import Corporate from '../componentsForNav/Corporate';
-import PressRoom from '../componentsForNav/PressRoom';
+import ForPassengers from './components/ForPassengers';
+import Services from './components/Services';
+import Vip from './components/Vip';
+import Corporate from './components/Corporate';
+import PressRoom from './components/PressRoom';
 import './navigation.scss';
 
 const Navigation = () => {
