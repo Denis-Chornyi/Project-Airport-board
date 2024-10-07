@@ -2,42 +2,42 @@
   min-height: 140px;
 
   &__buttons-wrapper {
-    display: flex;
     position: relative;
+    display: flex;
   }
 
   &__button {
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: #73d2f0;
-    border: none;
-    border-radius: 0 60px 0 0;
-    color: #fff;
-    cursor: pointer;
-    font-family: Open Sans, sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    width: 55%;
     height: 60px;
     padding: 0 135px 0 0;
-    position: absolute;
+    background-color: #73d2f0;
+    color: #fff;
+    border: none;
+    border-radius: 0 60px 0 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
     text-align: end;
     text-decoration: none;
-    top: 0;
     transition: 0.3s ease-in-out;
-    width: 55%;
     z-index: 5;
+    cursor: pointer;
 
     &:not(.filter__button_current):hover {
       background-color: #00c3ff;
     }
 
     &:last-child {
-      justify-content: start;
-      border-radius: 60px 0 0 0;
-      padding: 0 0 0 180px;
       right: 0;
+      justify-content: start;
+      padding: 0 0 0 180px;
       text-align: start;
+      border-radius: 60px 0 0 0;
     }
 
     &:last-child::before {
@@ -46,17 +46,17 @@
     }
 
     &::before {
+      position: absolute;
+      top: 16px;
+      left: 285px;
+      display: block;
+      height: 30px;
+      width: 30px;
       background: url(https://www.pngkey.com/png/full/138-1382606_icon-airplane-icon-blue-png.png)
         no-repeat 50%;
       background-size: contain;
       content: '';
-      display: block;
       filter: brightness(500%);
-      height: 30px;
-      left: 285px;
-      position: absolute;
-      top: 16px;
-      width: 30px;
     }
   }
 

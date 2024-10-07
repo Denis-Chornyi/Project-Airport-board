@@ -1,14 +1,14 @@
 .search {
-  margin: 0 auto 40px;
   width: 720px;
+  margin: 0 auto 40px;
 
   &__title {
+    margin: 0 0 25px 0;
+    padding-top: 65px;
     font-size: 70px;
     font-weight: 300;
-    margin: 0 0 25px 0;
     text-align: center;
     color: #fff;
-    padding-top: 65px;
   }
 
   &__wrapper {
@@ -16,17 +16,17 @@
   }
 
   &__wrapper::before {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    display: block;
+    height: 44px;
+    width: 44px;
     background: url(https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png)
       50%;
     background-size: contain;
     content: '';
-    display: block;
     filter: opacity(0.4);
-    height: 44px;
-    left: 15px;
-    position: absolute;
-    top: 18px;
-    width: 44px;
   }
 
   &__form {
@@ -34,28 +34,28 @@
   }
 
   &__input {
-    border: none;
-    font-size: 24px;
     height: 70px;
-    outline: none;
-    font-family: sans-serif;
-    padding: 0 20px 0 70px;
     width: 520px;
+    padding: 0 20px 0 70px;
+    font-family: sans-serif;
+    font-size: 24px;
+    border: none;
+    outline: none;
   }
 
   &__button {
-    background-color: #1eb7ee;
-    border: none;
-    border-top-right-radius: 80px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 26px;
-    font-weight: 700;
+    width: 200px;
     height: 70px;
     padding: 0 20px;
+    background-color: #1eb7ee;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
     text-align: left;
+    border: none;
+    border-top-right-radius: 80px;
     transition: 0.3s ease-in-out;
-    width: 200px;
+    cursor: pointer;
 
     &:hover {
       border-top-right-radius: 40px;

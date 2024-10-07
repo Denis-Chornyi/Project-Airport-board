@@ -6,19 +6,19 @@
   margin-bottom: 88px;
 
   &__button {
+    position: absolute;
     display: flex;
     justify-content: center;
     width: 45%;
+    height: 60px;
     text-decoration: none;
     padding-top: 16px;
     background-color: #fff;
     color: #1eb7ee;
     font-size: 20px;
     font-weight: 500;
-    height: 60px;
-    position: absolute;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background-color: #1eb7ee;
@@ -26,18 +26,18 @@
     }
 
     &::before {
+      position: absolute;
+      top: 16px;
+      left: 10px;
+      display: block;
+      height: 30px;
+      width: 30px;
+      margin-right: 20px;
       background: url(https://www.pngkey.com/png/full/138-1382606_icon-airplane-icon-blue-png.png)
         no-repeat 50%;
       background-size: contain;
-      margin-right: 20px;
       content: '';
-      display: block;
       filter: brightness(110%);
-      height: 30px;
-      left: 10px;
-      position: absolute;
-      top: 16px;
-      width: 30px;
     }
 
     &:hover::before {
@@ -52,9 +52,9 @@
   }
 
   &__button:nth-child(1) {
+    padding-left: 20px;
     text-align: left;
     border-radius: 10px 75px 10px 10px;
-    padding-left: 20px;
 
     &:hover {
       border-radius: 10px 35px 10px 10px;
@@ -63,8 +63,8 @@
 
   &__button:nth-child(2) {
     right: 0;
-    text-align: right;
     padding-right: 20px;
+    text-align: right;
     border-radius: 75px 10px 10px 10px;
 
     &:hover {

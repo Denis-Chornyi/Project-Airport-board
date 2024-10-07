@@ -1,12 +1,12 @@
 .board-main {
-  background-color: #e6e6e6;
   flex: 1 1 auto;
   padding: 132px 0 50px;
+  background-color: #e6e6e6;
 
   &__container {
     height: 100%;
-    margin: 0 auto;
     width: 1120px;
+    margin: 0 auto;
   }
 }
 
