@@ -1,4 +1,4 @@
-# Project-airport-board
+# Project: Airport board
 
 ### [GitHub Page](https://main--airport-board-react.netlify.app/)
 
