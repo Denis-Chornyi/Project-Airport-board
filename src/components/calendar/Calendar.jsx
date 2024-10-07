@@ -13,8 +13,6 @@ const Calendar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const inputStyles = { backgroundImage: `url(${calendar})` };
-
   const handleDateChange = event => {
     const newDate = event.target.value;
     dispatch(setFilterDate(newDate));
@@ -36,9 +34,13 @@ const Calendar = () => {
           type="date"
           className="filter__date-input"
           id="filter-date-input"
-          style={inputStyles}
           value={selectedDate}
           onChange={handleDateChange}
+        />
+        <img
+          src={calendar}
+          alt="calendar"
+          style={{ width: '40px', position: 'absolute', left: '20px' }}
         />
       </label>
       <div className="filter__date-buttons">
