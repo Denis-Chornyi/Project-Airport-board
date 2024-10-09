@@ -53,7 +53,10 @@ module.exports = (_, argv) => {
         template: './public/index.html'
       }),
       new CopyWebpackPlugin({
-        patterns: [{ from: 'public/_redirects', to: '' }]
+        patterns: [
+          { from: 'public/_redirects', to: '' },
+          { from: 'public/favicon-v1.ico', to: '' }
+        ]
       })
     ],
     devServer: {
