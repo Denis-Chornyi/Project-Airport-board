@@ -46,19 +46,16 @@ const Calendar = () => {
       </label>
       <div className="filter__date-buttons">
         <ButtonCalendar
-          selectedDate={selectedDate}
           name="YESTERDAY"
           date={yesterday}
           onDateChange={() => handleDateChange({ target: { value: yesterday } })}
         />
         <ButtonCalendar
-          selectedDate={selectedDate}
           name="TODAY"
           date={today}
           onDateChange={() => handleDateChange({ target: { value: today } })}
         />
         <ButtonCalendar
-          selectedDate={selectedDate}
           name="TOMORROW"
           date={tomorrow}
           onDateChange={() => handleDateChange({ target: { value: tomorrow } })}
