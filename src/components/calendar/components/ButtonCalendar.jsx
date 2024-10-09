@@ -9,8 +9,6 @@ const ButtonCalendar = ({ name, date }) => {
   const navigate = useNavigate();
 
   const selectedDate = useSelector(state => state.calendar.selectedDate);
-  console.log(selectedDate);
-  console.log(date);
 
   const handleClick = () => {
     dispatch(setActiveButton(name));
