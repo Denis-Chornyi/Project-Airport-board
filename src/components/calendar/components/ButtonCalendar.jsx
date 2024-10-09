@@ -7,7 +7,10 @@ import PropTypes from 'prop-types';
 const ButtonCalendar = ({ name, date }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const activeButton = useSelector(state => state.calendar.activeButton);
+
+  const selectedDate = useSelector(state => state.calendar.selectedDate);
+  console.log(selectedDate);
+  console.log(date);
 
   const handleClick = () => {
     dispatch(setActiveButton(name));
@@ -17,11 +20,11 @@ const ButtonCalendar = ({ name, date }) => {
     navigate({ search: params.toString() });
   };
 
+  const isActive = selectedDate === date;
+
   return (
     <div
-      className={`filter__date-button ${
-        activeButton === name ? 'filter__date-button_current' : ''
-      }`}
+      className={`filter__date-button ${isActive ? 'filter__date-button_current' : ''}`}
       onClick={handleClick}
     >
       <p>{date}</p>
@@ -33,5 +36,6 @@ const ButtonCalendar = ({ name, date }) => {
 export default ButtonCalendar;
 
 ButtonCalendar.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired
 };

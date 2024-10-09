@@ -8,7 +8,7 @@ const Main = () => {
   const mainStyles = { backgroundImage: `url(${mainPage})` };
   return (
     <main>
-      <section className="board" style={mainStyles}>
+      <section className="main" style={mainStyles}>
         <div className="container">
           <div className="search-form">
             <Search />
