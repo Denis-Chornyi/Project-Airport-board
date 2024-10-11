@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .filter {
   &__date-wrapper {
     display: flex;
@@ -13,7 +15,7 @@
 
   &__date-input-label p {
     margin: 0;
-    color: #1eb7ee;
+    color: $colorSkyBlue;
     font-size: 12px;
     font-weight: 700;
     text-align: center;
@@ -28,7 +30,7 @@
     height: 40px;
     width: 40px;
     font-size: 40px;
-    background-color: #1eb7ee;
+    background-color: $colorSkyBlue;
     background-position: 44% 47%;
     background-repeat: no-repeat;
     background-size: 120px 120px;
@@ -46,8 +48,8 @@
 
   &__date-button {
     width: 100px;
-    border-bottom: 3px solid #d0d0d0;
-    color: #b8b9b9;
+    border-bottom: 3px solid $colorLightGreyForBorder;
+    color: $colorGrey;
     text-align: center;
     transition: 0.3s ease-in-out;
     cursor: pointer;
@@ -65,7 +67,7 @@
   }
 
   &__date-button_current {
-    border-bottom: 3px solid #1eb7ee;
-    color: #1eb7ee;
+    border-bottom: 3px solid $colorSkyBlue;
+    color: $colorSkyBlue;
   }
 }

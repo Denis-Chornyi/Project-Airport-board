@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .header {
   &__list {
     display: flex;
@@ -13,7 +15,7 @@
     cursor: pointer;
 
     &:last-child {
-      color: #fff;
+      color: $colorWhite;
     }
   }
 
@@ -22,12 +24,12 @@
     align-items: center;
     height: 92px;
     padding: 0;
-    color: #fff;
+    color: $colorWhite;
 
     &_active {
       border-radius: 0 30px 0 0;
-      color: #008ab7;
-      background: linear-gradient(90deg, #1eb7ee 25%, #ffffff 100%);
+      color: $colorBlue;
+      background: linear-gradient(90deg, $colorSkyBlue 25%, $colorWhite 100%);
     }
   }
 

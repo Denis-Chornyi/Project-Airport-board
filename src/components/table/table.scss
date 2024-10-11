@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .table {
   display: flex;
   flex-direction: column;
@@ -11,12 +13,12 @@
     grid-template-columns: repeat(9, 1fr);
     gap: 10px;
     padding: 10px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $colorLightGrey;
   }
 
   &__header {
     font-weight: bold;
-    background-color: #e6e6e6;
+    background-color: $colorLightGrey;
   }
 
   &__header p {

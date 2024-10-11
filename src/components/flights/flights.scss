@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .flights {
   position: relative;
   display: flex;
@@ -13,16 +15,16 @@
     height: 60px;
     text-decoration: none;
     padding-top: 16px;
-    background-color: #fff;
-    color: #1eb7ee;
+    background-color: $colorWhite;
+    color: $colorSkyBlue;
     font-size: 20px;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 
     &:hover {
-      background-color: #1eb7ee;
-      color: #fff;
+      background-color: $colorSkyBlue;
+      color: $colorWhite;
     }
 
     &::before {

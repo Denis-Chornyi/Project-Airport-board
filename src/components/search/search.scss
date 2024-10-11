@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .search {
   width: 720px;
   margin: 0 auto 40px;
@@ -42,12 +44,16 @@
     outline: none;
   }
 
+  &__input::-webkit-search-cancel-button {
+    cursor: pointer;
+  }
+
   &__button {
     width: 200px;
     height: 70px;
     padding: 0 20px;
-    background-color: #1eb7ee;
-    color: #fff;
+    background-color: $colorSkyBlue;
+    color: $colorWhite;
     font-size: 26px;
     font-weight: 700;
     text-align: left;

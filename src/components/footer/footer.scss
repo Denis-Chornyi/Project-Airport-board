@@ -1,9 +1,11 @@
+@import '../../common/scss/variables.scss';
+
 .footer {
   width: 100%;
   min-height: 393px;
   padding: 30px 0 40px;
-  background-color: #595959;
-  color: #fff;
+  background-color: $colorDarkGrey;
+  color: $colorWhite;
 
   &__container {
     display: block;
@@ -29,7 +31,7 @@
   }
 
   &__link > a {
-    color: #fff;
+    color: $colorWhite;
     font-weight: 400;
     text-decoration: none;
   }
@@ -68,7 +70,7 @@
     height: 37px;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid hsla(0, 0%, 100%, 0.502);
+    border-top: 1px solid $colorDirtyWhite;
   }
 
   &__middle-logo-wrapper {
@@ -79,13 +81,13 @@
   }
 
   &__small-logo-wrapper a {
-    color: #fff9;
+    color: $colorDirtyWhite;
     font-size: 12px;
     text-decoration: none;
   }
 
   &__small-logo-wrapper span {
-    color: #fff9;
+    color: $colorDirtyWhite;
     font-size: 12px;
   }
 

@@ -89,6 +89,11 @@
     font-size: 18px;
     font-weight: 700;
   }
+  &__links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
   &__links a {
     width: max-content;

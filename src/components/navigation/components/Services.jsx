@@ -1,46 +1,39 @@
 import React from 'react';
-import imgPlane from '../../../../public/images/image-nav/Hotels.jpg';
-import { getModalStyles } from '../../../common/utilsModalStyles';
-import './componentsForNav.scss';
+import imgHotel from '../../../../public/images/image-nav/Hotels.jpg';
+import ModalContent from '../common/ModalContent';
 
 const Services = ({ isVisible }) => {
-  const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);
+  const allServices = [
+    { name: 'COVID-19 testing', href: '#' },
+    { name: 'Priority line', href: '#' },
+    { name: 'Express Line', href: '#' },
+    { name: 'Business lounge', href: '#' },
+    { name: 'VIP service', href: '#' },
+    { name: 'Hotel IEV', href: '#' },
+    { name: 'Transfer', href: '#' },
+    { name: 'Baggage wrapping', href: '#' },
+    { name: 'Long-term parking', href: '#' }
+  ];
+
+  const transfer = [
+    { name: 'Airline tickets', href: '#' },
+    { name: 'Hotels worldwide', href: '#' },
+    { name: 'Car rental', href: '#' }
+  ];
+
+  const links = [
+    { category: 'All services', items: allServices },
+    { category: 'Transfer', items: transfer }
+  ];
 
   return (
-    <div className="header-modal" style={styleModal}>
-      <div className="header-modal__container" style={styleContainer}>
-        <div className="header-modal__block">
-          <nav>
-            <img src={imgPlane} alt="plane" className="header-modal__block-img" />
-            <h4 className="header-modal__block-title">Hotels worldwide</h4>
-            <p className="header-modal__block-text">
-              Book hotels all over the world at best prices
-            </p>
-            <a className="header-modal__block-link">VIEW</a>
-          </nav>
-        </div>
-        <div className="header-modal__links">
-          <div>
-            <p>All services</p>
-            <a>COVID-19 testing</a>
-            <a>Priority line</a>
-            <a>Express Line</a>
-            <a>Business lounge</a>
-            <a>VIP service</a>
-            <a>Hotel IEV</a>
-            <a>Transfer</a>
-            <a>Baggage wrapping</a>
-            <a>Long-term parking</a>
-          </div>
-          <div>
-            <p>Transfer</p>
-            <a>Airline tickets</a>
-            <a>Hotels worldwide</a>
-            <a>Сar rental</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ModalContent
+      isVisible={isVisible}
+      image={imgHotel}
+      title="Hotels worldwide"
+      text="Book hotels all over the world at best prices"
+      links={links}
+    />
   );
 };
 

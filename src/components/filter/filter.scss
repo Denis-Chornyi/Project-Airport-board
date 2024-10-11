@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .filter {
   min-height: 140px;
 
@@ -15,8 +17,8 @@
     width: 55%;
     height: 60px;
     padding: 0 135px 0 0;
-    background-color: #73d2f0;
-    color: #fff;
+    background-color: $colorTransparentBlue;
+    color: $colorWhite;
     border: none;
     border-radius: 0 60px 0 0;
     font-family: 'Open Sans', sans-serif;
@@ -29,7 +31,7 @@
     cursor: pointer;
 
     &:not(.filter__button_current):hover {
-      background-color: #00c3ff;
+      background-color: $colorLightBlue;
     }
 
     &:last-child {
@@ -61,8 +63,8 @@
   }
 
   &__button_current {
-    background-color: #fff;
-    color: #1eb7ee;
+    background-color: $colorWhite;
+    color: $colorSkyBlue;
     z-index: 6;
 
     &::before {

@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import calendar from '../../../public/images/calendar.png';
 import ButtonCalendar from './components/ButtonCalendar';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterDate } from './calendar.actions';
@@ -32,7 +31,7 @@ const Calendar = () => {
         <p>{formattedDate}</p>
         <img
           className=""
-          src={calendar}
+          src="../../../public/images/calendar.png"
           alt="calendar"
           style={{ width: '40px', position: 'absolute' }}
         />

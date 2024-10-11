@@ -1,57 +1,49 @@
 import React from 'react';
 import imgPlane from '../../../../public/images/image-nav/plane.jpg';
-import PropTypes from 'prop-types';
-import { getModalStyles } from '../../../common/utilsModalStyles';
-import './componentsForNav.scss';
+import ModalContent from '../common/ModalContent';
 
 const ForPassengers = ({ isVisible }) => {
-  const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);
+  const links = [
+    {
+      category: 'Information',
+      items: [
+        { name: 'COVID-19', href: '#' },
+        { name: 'Before flight', href: '#' },
+        { name: 'Aviation security', href: '#' },
+        { name: 'Customs control', href: '#' },
+        { name: 'Border control', href: '#' },
+        { name: 'For passengers with disabilities', href: '#' },
+        { name: 'Traveling with animals', href: '#' },
+        { name: 'Airport map', href: '#' },
+        { name: 'Feedback form', href: '#' },
+        { name: 'Contacts', href: '#' }
+      ]
+    },
+    {
+      category: 'General',
+      items: [
+        { name: 'On-line schedule', href: '#' },
+        { name: 'Airport Directions', href: '#' },
+        { name: 'Parking', href: '#' },
+        { name: 'Baggage', href: '#' },
+        { name: 'Relaxation room', href: '#' },
+        { name: 'Airlines', href: '#' },
+        { name: 'Shop & dine', href: '#' },
+        { name: 'Mastercard Fast Line', href: '#' },
+        { name: 'Feedback form', href: '#' }
+      ]
+    }
+  ];
 
   return (
-    <div className="header-modal" style={styleModal}>
-      <div className="header-modal__container" style={styleContainer}>
-        <div className="header-modal__block">
-          <nav>
-            <img src={imgPlane} alt="plane" className="header-modal__block-img" />
-            <h4 className="header-modal__block-title">Airline tickets</h4>
-            <p className="header-modal__block-text">Purchase tickets online</p>
-            <a className="header-modal__block-link">Search</a>
-          </nav>
-        </div>
-        <div className="header-modal__links">
-          <div>
-            <p>Information</p>
-            <a>COVID-19</a>
-            <a>Before flight</a>
-            <a>Aviation security</a>
-            <a>Customs control</a>
-            <a>Border control</a>
-            <a>For passengers with disabilities</a>
-            <a>Traveling with animals</a>
-            <a>Airport map</a>
-            <a>Feedback form</a>
-            <a>Contacts</a>
-          </div>
-          <div>
-            <p>General</p>
-            <a>On-line schedule</a>
-            <a>Airport Directions</a>
-            <a>Parking</a>
-            <a>Baggage</a>
-            <a>Relaxation room</a>
-            <a>Airlines</a>
-            <a>Shop & dine</a>
-            <a>Mastercard Fast Line</a>
-            <a>Feedback form</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ModalContent
+      isVisible={isVisible}
+      image={imgPlane}
+      title="Airline tickets"
+      text="Purchase tickets online"
+      links={links}
+    />
   );
 };
 
 export default ForPassengers;
-
-ForPassengers.propTypes = {
-  isVisible: PropTypes.bool.isRequired
-};

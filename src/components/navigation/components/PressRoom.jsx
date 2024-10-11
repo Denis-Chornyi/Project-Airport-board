@@ -1,35 +1,30 @@
 import React from 'react';
 import imgPlane from '../../../../public/images/image-nav/plane.jpg';
-import { getModalStyles } from '../../../common/utilsModalStyles';
-import './componentsForNav.scss';
+import ModalContent from '../common/ModalContent';
 
 const PressRoom = ({ isVisible }) => {
-  const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);
+  const links = [
+    {
+      category: 'Press Room',
+      items: [
+        { name: 'Press Room main page', href: '#' },
+        { name: 'Newsroom', href: '#' },
+        { name: 'Social & Art Projects', href: '#' },
+        { name: 'Traffic statistics', href: '#' },
+        { name: 'Financial reports', href: '#' },
+        { name: 'Media contact', href: '#' }
+      ]
+    }
+  ];
 
   return (
-    <div className="header-modal" style={styleModal}>
-      <div className="header-modal__container" style={styleContainer}>
-        <div className="header-modal__block">
-          <nav>
-            <img src={imgPlane} alt="plane" className="header-modal__block-img" />
-            <h4 className="header-modal__block-title">Airline tickets</h4>
-            <p className="header-modal__block-text">Purchase tickets online</p>
-            <a className="header-modal__block-link">Search</a>
-          </nav>
-        </div>
-        <div className="header-modal__links">
-          <div>
-            <p>Press Room</p>
-            <a>Press Room main page</a>
-            <a>Newsroom</a>
-            <a>Social & Art Projects</a>
-            <a>Traffic statistics</a>
-            <a>Financial reports</a>
-            <a>Media contact</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ModalContent
+      isVisible={isVisible}
+      image={imgPlane}
+      title="Airline tickets"
+      text="Purchase tickets online"
+      links={links}
+    />
   );
 };
 

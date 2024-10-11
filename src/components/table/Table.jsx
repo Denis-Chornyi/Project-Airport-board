@@ -11,36 +11,53 @@ const Table = ({ flights }) => {
     );
   }
 
+  const headers = [
+    'Terminal',
+    'Departure city',
+    'Arrival city',
+    'Departure date',
+    'Arrival date',
+    'Airline name',
+    'Airline logo',
+    'Code share',
+    'Status'
+  ];
+
   return (
     <div className="table">
       <div className="table__header">
-        <p>Terminal</p>
-        <p>Departure city</p>
-        <p>Arrival city</p>
-        <p>Departure date</p>
-        <p>Arrival date</p>
-        <p>Airline name</p>
-        <p>Airline logo</p>
-        <p>Code share</p>
-        <p>Status</p>
+        {headers.map((header, index) => (
+          <p key={index}>{header}</p>
+        ))}
       </div>
-      {flights.map(flight => (
-        <div key={flight.id} className="table__row">
-          <div>{flight.terminal}</div>
-          <div>{flight.departureCity}</div>
-          <div>{flight.arrivalCity}</div>
-          <div>
-            {flight.departureDate ? new Date(flight.departureDate).toLocaleString() : 'N/A'}
+      {flights.map(
+        ({
+          id,
+          terminal,
+          departureCity,
+          arrivalCity,
+          departureDate,
+          arrivalDate,
+          airlineName,
+          airlineLogo,
+          codeShare,
+          status
+        }) => (
+          <div key={id} className="table__row">
+            <div>{terminal}</div>
+            <div>{departureCity}</div>
+            <div>{arrivalCity}</div>
+            <div>{departureDate ? new Date(departureDate).toLocaleString() : 'N/A'}</div>
+            <div>{arrivalDate ? new Date(arrivalDate).toLocaleString() : 'N/A'}</div>
+            <div>{airlineName}</div>
+            <div>
+              <img src={airlineLogo} alt={airlineName} width="30" />
+            </div>
+            <div>{codeShare}</div>
+            <div>{status}</div>
           </div>
-          <div>{flight.arrivalDate ? new Date(flight.arrivalDate).toLocaleString() : 'N/A'}</div>
-          <div>{flight.airlineName}</div>
-          <div>
-            <img src={flight.airlineLogo} alt={flight.airlineName} width="30" />
-          </div>
-          <div>{flight.codeShare}</div>
-          <div>{flight.status}</div>
-        </div>
-      ))}
+        )
+      )}
     </div>
   );
 };

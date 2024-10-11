@@ -1,3 +1,5 @@
+@import '../../common/scss/variables.scss';
+
 .header {
   position: fixed;
   top: 0;
@@ -7,8 +9,8 @@
   min-height: 92px;
   width: 100%;
   padding-left: 120px;
-  background-color: #1eb7ee;
-  box-shadow: 0 6px 12px 0 #0000004d;
+  background-color: $colorSkyBlue;
+  box-shadow: 0 6px 12px 0 $colorBlackForShadow;
   z-index: 100;
 
   &__logo {

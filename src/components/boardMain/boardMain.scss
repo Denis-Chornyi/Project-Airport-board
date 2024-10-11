@@ -1,7 +1,9 @@
+@import '../../common/scss/variables.scss';
+
 .board-main {
   flex: 1 1 auto;
   padding: 132px 0 50px;
-  background-color: #e6e6e6;
+  background-color: $colorLightGrey;
 
   &__container {
     height: 100%;

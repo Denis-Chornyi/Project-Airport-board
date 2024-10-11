@@ -1,6 +1,8 @@
+@import '../../common/scss/variables.scss';
+
 .board__content {
   height: 480px;
-  background-color: #fff;
+  background-color: $colorWhite;
   border-radius: 60px 60px 0 0;
   overflow: hidden;
 }
