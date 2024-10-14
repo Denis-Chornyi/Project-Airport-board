@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getModalStyles } from '../../../common/utilsModalStyles';
 import './index.scss';
 
 const ModalContent = ({ isVisible, image, title, text, links }) => {
-  const { container: styleContainer, modal: styleModal } = getModalStyles(isVisible);
+  if (!isVisible) return null;
 
   return (
-    <div className="header-modal" style={styleModal}>
-      <div className="header-modal__container" style={styleContainer}>
+    <div className="header-modal">
+      <div className="header-modal__container">
         <div className="header-modal__block">
           <nav>
             <img src={image} alt={title} className="header-modal__block-img" />

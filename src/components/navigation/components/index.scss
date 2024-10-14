@@ -1,3 +1,5 @@
+@import '../../../common/scss/variables.scss';
+
 .header-modal {
   position: absolute;
   top: 92px;
@@ -12,8 +14,8 @@
     justify-content: center;
     height: 400px;
     padding: 20px 0 50px 0;
-    background-color: #fff;
-    color: #1eb7ee;
+    background-color: $colorWhite;
+    color: $colorSkyBlue;
     border-bottom-right-radius: 150px;
     z-index: 3;
     transition: visibility 0.3s, translate 0.3s, opacity 0.3s;
@@ -29,7 +31,7 @@
   &__block nav {
     width: 275px;
     height: 100%;
-    color: #000;
+    color: $colorBlack;
     border-radius: 20px;
     box-shadow: 0px 16px 32px -12px rgba(0, 0, 0, 0.31);
   }
@@ -60,15 +62,15 @@
     padding: 5px 20px;
     margin-left: 15px;
     font-size: 15px;
-    color: #1eb7ee;
+    color: $colorSkyBlue;
     font-weight: 600;
     border-radius: 24px;
-    border: 2px solid #1eb7ee;
+    border: 2px solid $colorSkyBlue;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: #1eb7ee;
-      color: #fff;
+      background-color: $colorSkyBlue;
+      color: $colorWhite;
     }
   }
 
@@ -98,7 +100,7 @@
   &__links a {
     width: max-content;
     margin-bottom: 10px;
-    color: #1eb7ee;
+    color: $colorSkyBlue;
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
@@ -107,7 +109,7 @@
     cursor: pointer;
 
     &:hover {
-      border-bottom: 1px solid #1eb7ee;
+      border-bottom: 1px solid $colorSkyBlue;
     }
   }
 }
