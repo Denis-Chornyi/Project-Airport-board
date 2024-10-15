@@ -28,7 +28,7 @@ const Calendar = () => {
         <p>{formattedDate}</p>
         <img
           className=""
-          src="../../../public/images/calendar.png"
+          src="/public/images/calendar.png"
           alt="calendar"
           style={{ width: '40px', position: 'absolute' }}
         />
