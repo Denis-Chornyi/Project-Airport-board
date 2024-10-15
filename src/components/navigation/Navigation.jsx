@@ -4,6 +4,7 @@ import imgPlane from '../../../public/images/image-nav/plane.jpg';
 import imgHotel from '../../../public/images/image-nav/Hotels.jpg';
 import imgVip from '../../../public/images/image-nav/vip.jpg';
 import './navigation.scss';
+import { navItems } from './data';
 
 const Navigation = () => {
   const [visibleItem, setVisibleItem] = useState('');
@@ -13,14 +14,6 @@ const Navigation = () => {
     setVisibleItem(visibleItem === item ? '' : item);
     setActiveItem(visibleItem === item ? '' : item);
   };
-
-  const navItems = [
-    { key: 'ForPassengers', title: 'For passengers' },
-    { key: 'Services', title: 'IEV Services' },
-    { key: 'VIP', title: 'VIP' },
-    { key: 'Corporate', title: 'Corporate' },
-    { key: 'PressRoom', title: 'Press Room' }
-  ];
 
   const modalData = {
     ForPassengers: {

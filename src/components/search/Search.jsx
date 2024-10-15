@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setFilterNumber } from './search.actions';
 import { useNavigate, useLocation } from 'react-router-dom';
 import moment from 'moment';
 import './search.scss';
 
 const Search = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const today = moment().format('YYYY-MM-DD');
@@ -33,7 +30,6 @@ const Search = () => {
 
   const handleSearch = event => {
     event.preventDefault();
-    dispatch(setFilterNumber(localSearchTerm));
     updateUrl(localSearchTerm);
   };
 

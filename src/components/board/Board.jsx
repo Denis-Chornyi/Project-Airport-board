@@ -6,7 +6,6 @@ import { fetchFlightsSuccess } from './board.actions';
 import { fetchFlights } from '../../common/gateway/eventsGateways';
 import moment from 'moment';
 import { useLocation } from 'react-router-dom';
-import { setActiveButtonFilter } from '../filter/filter.actions';
 import { setFilterDate } from '../calendar/calendar.actions';
 import './board.scss';
 
@@ -14,7 +13,6 @@ const Board = () => {
   const dispatch = useDispatch();
   const flights = useSelector(state => state.board.flights);
   const selectedDate = useSelector(state => state.calendar.selectedDate);
-  const activeFilter = useSelector(state => state.filter.activeButtonFilter);
   const location = useLocation();
 
   useEffect(() => {
@@ -26,16 +24,14 @@ const Board = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
 
-    const actions = [
-      setActiveButtonFilter(params.get('type') || 'DEPARTURE'),
-      setFilterDate(params.get('date') || moment().format('YYYY-MM-DD'))
-    ];
+    const actions = [setFilterDate(params.get('date') || moment().format('YYYY-MM-DD'))];
 
     actions.forEach(dispatch);
   }, [location.search, dispatch]);
 
   const params = new URLSearchParams(location.search);
   const searchTerm = params.get('search') || '';
+  const activeFilter = params.get('type') || 'DEPARTURE';
 
   let filteredFlights = [];
 

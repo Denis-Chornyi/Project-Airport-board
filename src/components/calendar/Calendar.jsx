@@ -1,21 +1,18 @@
 import React from 'react';
 import moment from 'moment';
 import ButtonCalendar from './components/ButtonCalendar';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilterDate } from './calendar.actions';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './calendar.scss';
 
 const Calendar = () => {
-  const dispatch = useDispatch();
-  const selectedDate = useSelector(state => state.calendar.selectedDate);
   const location = useLocation();
   const navigate = useNavigate();
 
+  const params = new URLSearchParams(location.search);
+  const selectedDate = params.get('date') || moment().format('YYYY-MM-DD');
+
   const handleDateChange = event => {
     const newDate = event.target.value;
-    dispatch(setFilterDate(newDate));
-    const params = new URLSearchParams(location.search);
     params.set('date', newDate);
     navigate({ search: params.toString() });
   };
