@@ -35,8 +35,9 @@ module.exports = (_, argv) => {
               loader: 'url-loader',
               options: {
                 limit: 8192,
-                name: '[name].[ext]',
-                outputPath: 'public/images'
+                name: '[name].[hash].[ext]',
+                outputPath: 'images',
+                publicPath: '/images'
               }
             }
           ]
@@ -55,7 +56,8 @@ module.exports = (_, argv) => {
       new CopyWebpackPlugin({
         patterns: [
           { from: 'public/_redirects', to: '' },
-          { from: 'public/favicon-v1.ico', to: '' }
+          { from: 'public/favicon-v1.ico', to: '' },
+          { from: 'public/images', to: 'images' }
         ]
       })
     ],
