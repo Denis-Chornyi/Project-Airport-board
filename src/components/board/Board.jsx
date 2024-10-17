@@ -13,7 +13,7 @@ const Board = () => {
   const dispatch = useDispatch();
   const flights = useSelector(state => state.board.flights);
   const selectedDate = useSelector(state => state.calendar.selectedDate);
-  const location = useLocation();
+  const { search } = useLocation();
 
   useEffect(() => {
     fetchFlights().then(data => {
@@ -22,29 +22,20 @@ const Board = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-
-    const actions = [setFilterDate(params.get('date') || moment().format('YYYY-MM-DD'))];
-
-    actions.forEach(dispatch);
-  }, [location.search, dispatch]);
+    const params = new URLSearchParams(search);
+    dispatch(setFilterDate(params.get('date') || moment().format('YYYY-MM-DD')));
+  }, [search, dispatch]);
 
   const params = new URLSearchParams(location.search);
   const searchTerm = params.get('search') || '';
   const activeFilter = params.get('type') || 'DEPARTURE';
 
-  let filteredFlights = [];
-
-  if (searchTerm) {
-    filteredFlights = flights.filter(
-      flight => flight.codeShare && flight.codeShare.includes(searchTerm)
-    );
-  } else {
-    filteredFlights = flights.filter(flight => {
-      const flightDepartureDate = moment(flight.departureDate).format('YYYY-MM-DD');
-      return flightDepartureDate === selectedDate && flight.type === activeFilter;
-    });
-  }
+  const filteredFlights = flights.filter(flight =>
+    searchTerm
+      ? flight.codeShare?.includes(searchTerm)
+      : moment(flight.departureDate).format('YYYY-MM-DD') === selectedDate &&
+        flight.type === activeFilter
+  );
 
   return (
     <div className="board__content">

@@ -18,11 +18,11 @@ const ButtonCalendar = ({ name, date }) => {
     navigate({ search: params.toString() });
   };
 
-  const isActive = selectedDate === date;
-
   return (
     <div
-      className={`filter__date-button ${isActive ? 'filter__date-button_current' : ''}`}
+      className={`filter__date-button ${
+        selectedDate === date ? 'filter__date-button_current' : ''
+      }`}
       onClick={handleClick}
     >
       <p>{date}</p>
