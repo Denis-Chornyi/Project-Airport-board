@@ -7,7 +7,7 @@
 Please be informed that due to the war in Ukraine, after 24.02.2022, the origin API no longer
 provides information about flights. For testing purposes, a Mock API with test data has been used.
 
-Test dates: 31/12/2021, 01/01/2022, 03/01/2022, 28/04/2022, 25/05/2022, 01/01/2023, 27/03/2023
+Test dates: 04/01/2022, 05/01/2022, 28/04/2022, 01/05/2022, 25/05/2022, 08/01/2023, 27/03/2023
 
 ### The tech stack is:
 
